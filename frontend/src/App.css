@@ -1,0 +1,214 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* src/App.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(0, 234, 255, 0.2);
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+button,
+.btn-edit,
+.btn-delete {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background: #00eaff;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.btn-primary:hover {
+  background: #00c2d3;
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.btn-edit {
+  background:transparent;
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.btn-edit:hover {
+  background: transparent;
+  box-shadow: 0 0 10px #ffc107;
+}
+
+.btn-delete {
+  background: transparent;
+  color: red;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background: transparent;
+  box-shadow: 0 0 10px #dc3545;
+}
+
+.transactions-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transactions-table th {
+  background: rgba(0, 234, 255, 0.1);
+  color: #00eaff;
+}
+
+.transactions-table td.income {
+  color: #7CFC00;
+  font-weight: bold;
+}
+
+.transactions-table td.expense {
+  color: #FF4C4C;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+h1 {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #00eaff;
+  }
+  to {
+    text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff, 0 0 40px #00f0ff;
+  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, #00eaff44, #000000 70%);
+  filter: blur(80px);
+  z-index: -1;
+  animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(10px, 10px); }
+  100% { transform: scale(1) translate(0, 0); }
+}
